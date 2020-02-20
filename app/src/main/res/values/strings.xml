@@ -10,25 +10,58 @@
     <string name="hitung">Hitung</string>
     <string name="copyright">Created By Fajar</string>
     <string name="namapasangan">Masukkan Nama pasangamu</string>
-    <string name="tinari">Hasilnya TINARI. Artinya kalian akan gampang menemukan kebahagiaan, gampang dalam mencari rezeki
-        dan tidak sampai hidup dalam kekurangan. Kehidupan kalian akan mendapat banyak keberuntungan.</string>
+
+    <string name="tinari">
+        Hasilnya TINARI. Artinya kalian akan gampang menemukan kebahagiaan, gampang dalam mencari rezeki
+        dan tidak sampai hidup dalam kekurangan. Kehidupan kalian akan mendapat banyak keberuntungan.
+    </string>
+    <string name="topo">
+        Hasilnya TOPO. Artinya dalam membina rumah tangga akan banyak mengalami kesusahan di awal-awal.
+        Bisa saja masalah ekonomi dsb. Namun, ketika sudah memiliki anak dan cukup lama berumah tangga, akhirnya akan hidup
+        sukses dan bahagia.
+    </string>
+    <string name="ratu">
+        Hasilnya RATU. Artinya, memang pasanganmu saat ini memang sudah jodohnya. Dihargai dan disegani
+        oleh lingkungan sekitar. Bahkan banyak yang iri akan keharmonisan rumah tangga kalian.
+    </string>
+    <string name="jodoh">
+        Hasilnya JODOH. Artinya, kalian memang beneran cocok dan berjodoh. Bisa saling menerima segala kelebihan dan kekurangan
+        masing masing. Rumah tangga rukun sampai tua.
+    </string>
+    <string name="pegat">
+        Hasilnya PEGAT. Artinya, kemungkinan kalian akan menemukan banyak masalah dikemudian hari, bisa dari masalah ekonomi, kekuasaan
+        atau bahkan perselingkuhan yg bisa menyebabkan perceraian.
+    </string>
+    <string name="padu">
+        Hasilnya PADU. Artinya, rumah tangga kalian akan banyak mengalami pertengkaran. meskipun begitu, tidak akan membawa kepada perceraian.
+        Masalah pertengkaran tersebut bahkan bisa  dipicu oleh hal-hal yg cukup sepele.
+    </string>
+    <string name="sujanan">
+        Hasilnya SUJANAN. Artinya, dalam berunah tangga nantinya akan banyak mengalami pertengkaran dan masalah perselingkuhan. Bisa dari pihak
+        laki-laki atau perempuan yg memulai perceraian.
+    </string>
+    <string name="pesthi">
+        Hasilnya PESTHI. Artinya, akan rukun dalam berumah tangga, tenteram, adem ayem sampai tua. Meskipun ada masalah, tetapi tidak akan
+        merusak keharmonisan keluarga.
+    </string>
 
     <string-array name="spinnerday">
-        <item>Senin</item>
         <item>Selasa</item>
+        <item>Senin</item>
+        <item>Minggu</item>
+        <item>Jumat</item>
         <item>Rabu</item>
         <item>Kamis</item>
-        <item>Jumat</item>
         <item>Sabtu</item>
-        <item>Minggu</item>
     </string-array>
 
     <string-array name="spinner_pasaran">
-        <item>Pahing</item>
-        <item>Pon</item>
         <item>Wage</item>
-        <item>Kliwon</item>
         <item>Legi</item>
+        <item>JANGAN DIPILIH</item>
+        <item>Pon</item>
+        <item>Kliwon</item>
+        <item>Pahing</item>
     </string-array>
 
 

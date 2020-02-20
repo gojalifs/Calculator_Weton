@@ -6,30 +6,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener {
 
     private Spinner spinner, spinner2, spinner3, spinner4;
-    //private int number;
-    int getSpinnerPosition;
-    private EditText name_user, name_doi;
-
-    //private SpinnerActivity spinnerActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Spinner spinner = findViewById(R.id.new_spinner);
         Button button = findViewById(R.id.submit);
-        name_user = findViewById(R.id.name);
-        name_doi = findViewById(R.id.pasangan);
-
-        //spinner.setOnItemSelectedListener(this);
 
         //create spinnerday view
         spinner = findViewById(R.id.spinner_days);
@@ -84,69 +73,48 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
             @Override
             public void onClick(View v) {
                 if (v.getId() == R.id.submit) {
-                    /*//Intent moveToResult = new Intent(MainActivity.this, ResultAcitivity.class);
-                    //moveToResult.putExtra("move", nama);
-                    //moveToResult.putExtra(ResultAcitivity.EXTRA_NAME, nama);
-                    //startActivity(moveToResult);
-
-                    TextView resultan = findViewById(R.id.tv_result);
-                    String nameUser = name_user.getText().toString();
-                    String nameDoi = name_doi.getText().toString();
-                    String neww = "Halo " + nameUser + ", Kamu dan " + nameDoi + " Cocok.. SELAMAT";
-                    resultan.setText(neww);*/
-
-                    switch (getSpinnerPosition) {
-                        case 1:
-
-                            break;
-                    }
-
-                    hitungWeton();
-
-                    //String resultWeton = "HOLAAAAAAAAAAAA";
-                    //TextView viewStringOfSpinner = findViewById(R.id.tv_spinner1_result);
-                    //viewStringOfSpinner.setText(resultWeton);
+                    calculateWeton();
                 }
             }
         });
-
     }
 
-    private void hitungWeton() {
-        int value1 = spinner.getSelectedItemPosition() + 1;
-        int value2 = spinner2.getSelectedItemPosition() + 1;
-        int value3 = spinner3.getSelectedItemPosition() + 1;
-        int value4 = spinner4.getSelectedItemPosition() + 1;
+    private void calculateWeton() {
+        int value1 = spinner.getSelectedItemPosition() + 3;
+        int value2 = spinner2.getSelectedItemPosition() + 4;
+        int value3 = spinner3.getSelectedItemPosition() + 3;
+        int value4 = spinner4.getSelectedItemPosition() + 4;
 
         int patokan1 = value1 + value2;
         int patokan2 = value3 + value4;
 
+
         int resultPatokan = patokan1 + patokan2;
 
-        char hasilnya[] = {10, 19, 28, 37};
+        TextView resultsPatokan = findViewById(R.id.tv_spinner1_result);
 
-
-        if (resultPatokan == 10 || resultPatokan == 19 || resultPatokan == 28 || resultPatokan == 37) {
-            String nameUser = name_user.getText().toString();
-            String nameDoi = name_doi.getText().toString();
-
-            TextView hasilPatokan = findViewById(R.id.tv_spinner1_result);
-
-            hasilPatokan.setText(getString(R.string.tinari));
+        if (resultPatokan == 1 || resultPatokan == 9 || resultPatokan == 10 || resultPatokan == 18 || resultPatokan == 19
+                || resultPatokan == 27 || resultPatokan == 28 || resultPatokan == 36) {
+            resultsPatokan.setText(getString(R.string.pegat));
+        } else if (resultPatokan == 2 || resultPatokan == 11 || resultPatokan == 20 || resultPatokan == 29) {
+            resultsPatokan.setText(getString(R.string.ratu));
+        } else if (resultPatokan == 3 || resultPatokan == 12 || resultPatokan == 21 || resultPatokan == 30) {
+            resultsPatokan.setText(getString(R.string.jodoh));
+        } else if (resultPatokan == 4 || resultPatokan == 13 || resultPatokan == 22 || resultPatokan == 31) {
+            resultsPatokan.setText(R.string.topo);
+        } else if (resultPatokan == 5 || resultPatokan == 14 || resultPatokan == 23 || resultPatokan == 32) {
+            resultsPatokan.setText(R.string.tinari);
+        } else if (resultPatokan == 6 || resultPatokan == 15 || resultPatokan == 24 || resultPatokan == 33) {
+            resultsPatokan.setText(R.string.padu);
+        } else if (resultPatokan == 7 || resultPatokan == 16 || resultPatokan == 25 || resultPatokan == 34) {
+            resultsPatokan.setText(R.string.sujanan);
         } else {
-            TextView hasilPatokan = findViewById(R.id.tv_spinner1_result);
-            hasilPatokan.setText("Salah");
+            resultsPatokan.setText(R.string.pesthi);
         }
-
-        /*String qwqww = String.valueOf(value1);
-        TextView viewHasil = findViewById(R.id.tv_spinner1_result);
-        viewHasil.setText(qwqww);*/
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        //this.number = position + 1;
-        getSpinnerPosition = position + 1;
 
     }
 
@@ -154,5 +122,4 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
 }

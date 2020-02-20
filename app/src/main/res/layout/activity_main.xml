@@ -41,13 +41,6 @@
             android:layout_below="@id/name"
             android:text="@string/harim" />
 
-        <!--<Button
-            android:id="@+id/spinner_days"
-            style="@style/Button"
-            android:layout_below="@+id/mday"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="0dp" /> -->
-
         <Spinner
             android:id="@+id/spinner_days"
             android:layout_width="match_parent"
@@ -59,14 +52,6 @@
             style="@style/Text_View"
             android:layout_below="@id/spinner_days"
             android:text="@string/pasaran_jawa" />
-
-        <!--<Button
-            android:id="@+id/spinner_jawa"
-            style="@style/Button"
-            android:layout_below="@id/pasaran"
-            android:layout_marginStart="66dp"
-            android:layout_marginTop="0dp"
-            android:layout_toEndOf="@id/spinner_days" /> -->
 
         <Spinner
             android:id="@id/spinner_jawa"
@@ -96,16 +81,11 @@
             android:layout_below="@id/pasangan"
             android:text="@string/harim" />
 
-        <!--<Button
-            android:id="@+id/spinner_days2"
-            style="@style/Button"
-            android:layout_below="@+id/mday2"
-            android:layout_marginStart="40dp"/>-->
-
         <Spinner
             android:id="@+id/spinner_days2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:layout_below="@id/mday2" />
 
 
@@ -116,17 +96,11 @@
             android:layout_below="@id/spinner_days2"
             android:text="@string/pasaran_jawa" />
 
-        <!--<Button
-            android:id="@+id/spinner_jawa2"
-            style="@style/Button"
-            android:layout_below="@id/pasaran2"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="53dp" /> -->
-
         <Spinner
             android:id="@+id/spinner_jawa2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:layout_below="@id/pasaran2" />
 
         <Button
@@ -144,7 +118,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/submit"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="30dp"
             android:textSize="25sp" />
 
         <TextView
@@ -153,6 +129,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_result"
             android:layout_marginTop="15dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:textSize="25sp" />
 
         <TextView
