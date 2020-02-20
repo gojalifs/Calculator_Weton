@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name1"
+            style="@style/Text_View"
+            android:layout_marginTop="100dp"
+            android:text="@string/nama"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/name"
+            style="@style/input_fields"
+            android:layout_below="@id/name1"
+            android:hint="@string/name"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/mday"
+            style="@style/Text_View"
+            android:layout_below="@id/name"
+            android:text="@string/harim" />
+
+        <!--<Button
+            android:id="@+id/spinner_days"
+            style="@style/Button"
+            android:layout_below="@+id/mday"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="0dp" /> -->
+
+        <Spinner
+            android:id="@+id/spinner_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mday" />
+
+        <TextView
+            android:id="@+id/pasaran"
+            style="@style/Text_View"
+            android:layout_below="@id/spinner_days"
+            android:text="@string/pasaran_jawa" />
+
+        <!--<Button
+            android:id="@+id/spinner_jawa"
+            style="@style/Button"
+            android:layout_below="@id/pasaran"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/spinner_days" /> -->
+
+        <Spinner
+            android:id="@id/spinner_jawa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pasaran" />
+
+        <TextView
+            android:id="@+id/name2"
+            style="@style/Text_View"
+            android:layout_below="@+id/spinner_jawa"
+            android:layout_marginTop="30dp"
+            android:text="@string/nama_pasangan"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pasangan"
+            style="@style/input_fields"
+            android:layout_below="@+id/name2"
+            android:hint="@string/namapasangan"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/mday2"
+            style="@style/Text_View"
+            android:layout_width="170dp"
+            android:layout_below="@id/pasangan"
+            android:text="@string/harim" />
+
+        <!--<Button
+            android:id="@+id/spinner_days2"
+            style="@style/Button"
+            android:layout_below="@+id/mday2"
+            android:layout_marginStart="40dp"/>-->
+
+        <Spinner
+            android:id="@+id/spinner_days2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mday2" />
+
+
+        <TextView
+            android:id="@+id/pasaran2"
+            style="@style/Text_View"
+            android:layout_width="170dp"
+            android:layout_below="@id/spinner_days2"
+            android:text="@string/pasaran_jawa" />
+
+        <!--<Button
+            android:id="@+id/spinner_jawa2"
+            style="@style/Button"
+            android:layout_below="@id/pasaran2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="53dp" /> -->
+
+        <Spinner
+            android:id="@+id/spinner_jawa2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pasaran2" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/spinner_jawa2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:text="@string/hitung"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/submit"
+            android:layout_marginTop="15dp"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_spinner1_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_result"
+            android:layout_marginTop="15dp"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_spinner1_result"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/copyright" />
+
+    </RelativeLayout>
+
+</ScrollView>

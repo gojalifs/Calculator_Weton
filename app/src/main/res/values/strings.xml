@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Weton Calculator</string>
+    <string name="name">Masukkan Namamu</string>
+    <string name="title">KALKULATOR WETON</string>
+    <string name="nama">Nama</string>
+    <string name="harimasehi">Masukkan Hari Masehi</string>
+    <string name="harim">Hari Lahir Masehi</string>
+    <string name="nama_pasangan">Nama Pasangan</string>
+    <string name="pasaran_jawa">Hari Lahir Jawa</string>
+    <string name="hitung">Hitung</string>
+    <string name="copyright">Created By Fajar</string>
+    <string name="namapasangan">Masukkan Nama pasangamu</string>
+
+    <string-array name="spinnerday">
+        <item>Senin</item>
+        <item>Selasa</item>
+        <item>Selasa</item>
+        <item>Rabu</item>
+        <item>Kamis</item>
+        <item>Jumat</item>
+        <item>Sabtu</item>
+        <item>Minggu</item>
+    </string-array>
+
+    <string-array name="spinner_pasaran">
+        <item>Pahing</item>
+        <item>Pon</item>
+        <item>Wage</item>
+        <item>Kliwon</item>
+        <item>Legi</item>
+    </string-array>
+
+
+</resources>
