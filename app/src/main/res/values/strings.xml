@@ -10,10 +10,11 @@
     <string name="hitung">Hitung</string>
     <string name="copyright">Created By Fajar</string>
     <string name="namapasangan">Masukkan Nama pasangamu</string>
+    <string name="tinari">Hasilnya TINARI. Artinya kalian akan gampang menemukan kebahagiaan, gampang dalam mencari rezeki
+        dan tidak sampai hidup dalam kekurangan. Kehidupan kalian akan mendapat banyak keberuntungan.</string>
 
     <string-array name="spinnerday">
         <item>Senin</item>
-        <item>Selasa</item>
         <item>Selasa</item>
         <item>Rabu</item>
         <item>Kamis</item>

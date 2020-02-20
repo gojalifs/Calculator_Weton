@@ -1,9 +1,6 @@
 package com.fajar.latihan.calculatorweton;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,12 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener {
 
     private Spinner spinner, spinner2, spinner3, spinner4;
-    private int number;
+    //private int number;
+    int getSpinnerPosition;
+    private EditText name_user, name_doi;
 
     //private SpinnerActivity spinnerActivity;
 
@@ -28,8 +26,8 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
         //Spinner spinner = findViewById(R.id.new_spinner);
         Button button = findViewById(R.id.submit);
-        final EditText name_user = findViewById(R.id.name);
-        final EditText name_doi = findViewById(R.id.pasangan);
+        name_user = findViewById(R.id.name);
+        name_doi = findViewById(R.id.pasangan);
 
         //spinner.setOnItemSelectedListener(this);
 
@@ -85,46 +83,70 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.submit:
-                        //Intent moveToResult = new Intent(MainActivity.this, ResultAcitivity.class);
-                        //moveToResult.putExtra("move", nama);
-                        //moveToResult.putExtra(ResultAcitivity.EXTRA_NAME, nama);
-                        //startActivity(moveToResult);
+                if (v.getId() == R.id.submit) {
+                    /*//Intent moveToResult = new Intent(MainActivity.this, ResultAcitivity.class);
+                    //moveToResult.putExtra("move", nama);
+                    //moveToResult.putExtra(ResultAcitivity.EXTRA_NAME, nama);
+                    //startActivity(moveToResult);
 
-                        TextView resultan = findViewById(R.id.tv_result);
-                        String nameUser = name_user.getText().toString();
-                        String nameDoi = name_doi.getText().toString();
-                        String neww = "Halo " + nameUser + ", Kamu dan " + nameDoi + " Cocok.. SELAMAT";
-                        resultan.setText(neww);
+                    TextView resultan = findViewById(R.id.tv_result);
+                    String nameUser = name_user.getText().toString();
+                    String nameDoi = name_doi.getText().toString();
+                    String neww = "Halo " + nameUser + ", Kamu dan " + nameDoi + " Cocok.. SELAMAT";
+                    resultan.setText(neww);*/
 
+                    switch (getSpinnerPosition) {
+                        case 1:
 
-                        break;
+                            break;
+                    }
+
+                    hitungWeton();
+
+                    //String resultWeton = "HOLAAAAAAAAAAAA";
+                    //TextView viewStringOfSpinner = findViewById(R.id.tv_spinner1_result);
+                    //viewStringOfSpinner.setText(resultWeton);
                 }
             }
         });
 
     }
 
-    /*@Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.submit:
-                Intent moveToMasehi1 = new Intent(MainActivity.this, HariMasehi.class);
-                startActivity(moveToMasehi1);
+    private void hitungWeton() {
+        int value1 = spinner.getSelectedItemPosition() + 1;
+        int value2 = spinner2.getSelectedItemPosition() + 1;
+        int value3 = spinner3.getSelectedItemPosition() + 1;
+        int value4 = spinner4.getSelectedItemPosition() + 1;
 
-                break;
+        int patokan1 = value1 + value2;
+        int patokan2 = value3 + value4;
+
+        int resultPatokan = patokan1 + patokan2;
+
+        char hasilnya[] = {10, 19, 28, 37};
+
+
+        if (resultPatokan == 10 || resultPatokan == 19 || resultPatokan == 28 || resultPatokan == 37) {
+            String nameUser = name_user.getText().toString();
+            String nameDoi = name_doi.getText().toString();
+
+            TextView hasilPatokan = findViewById(R.id.tv_spinner1_result);
+
+            hasilPatokan.setText(getString(R.string.tinari));
+        } else {
+            TextView hasilPatokan = findViewById(R.id.tv_spinner1_result);
+            hasilPatokan.setText("Salah");
         }
 
-    }*/
+        /*String qwqww = String.valueOf(value1);
+        TextView viewHasil = findViewById(R.id.tv_spinner1_result);
+        viewHasil.setText(qwqww);*/
+    }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        spinner.getSelectedItemPosition();
-        this.number = position + 1;
-        String getSpinnerPosition = String.valueOf(number);
-        TextView viewStringOfSpinner = findViewById(R.id.tv_spinner1_result);
-        viewStringOfSpinner.setText(getSpinnerPosition);
+        //this.number = position + 1;
+        getSpinnerPosition = position + 1;
 
     }
 
