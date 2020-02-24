@@ -33,7 +33,8 @@
             style="@style/input_fields"
             android:layout_below="@id/name1"
             android:hint="@string/name"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="AutoFill" />
 
         <TextView
             android:id="@+id/mday"
@@ -72,7 +73,8 @@
             style="@style/input_fields"
             android:layout_below="@+id/name2"
             android:hint="@string/namapasangan"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="AutoFill" />
 
         <TextView
             android:id="@+id/mday2"
@@ -105,6 +107,7 @@
 
         <Button
             android:id="@+id/submit"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_below="@+id/spinner_jawa2"
@@ -139,7 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_spinner1_result"
             android:layout_marginStart="300dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="@string/copyright" />
 
     </RelativeLayout>

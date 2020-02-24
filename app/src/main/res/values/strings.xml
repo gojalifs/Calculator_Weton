@@ -10,6 +10,7 @@
     <string name="hitung">Hitung</string>
     <string name="copyright">Created By Fajar</string>
     <string name="namapasangan">Masukkan Nama pasangamu</string>
+    <string name="result_name">Hai %1$s! Kamu dan %2$s cocok, karena </string>
 
     <string name="tinari">
         Hasilnya TINARI. Artinya kalian akan gampang menemukan kebahagiaan, gampang dalam mencari rezeki
@@ -26,7 +27,7 @@
     </string>
     <string name="jodoh">
         Hasilnya JODOH. Artinya, kalian memang beneran cocok dan berjodoh. Bisa saling menerima segala kelebihan dan kekurangan
-        masing masing. Rumah tangga rukun sampai tua.
+        masing-masing. Rumah tangga rukun sampai tua.
     </string>
     <string name="pegat">
         Hasilnya PEGAT. Artinya, kemungkinan kalian akan menemukan banyak masalah dikemudian hari, bisa dari masalah ekonomi, kekuasaan
@@ -57,12 +58,27 @@
 
     <string-array name="spinner_pasaran">
         <item>Wage</item>
-        <item>Legi</item>
+        <item>Legi/manis</item>
         <item>JANGAN DIPILIH</item>
         <item>Pon</item>
         <item>Kliwon</item>
         <item>Pahing</item>
     </string-array>
+    <string name="title_activity_navigation">Kalkulator Weton</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="communicate">Communicate</string>
 
 
 </resources>

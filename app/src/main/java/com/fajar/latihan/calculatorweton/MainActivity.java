@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -80,6 +81,15 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
     }
 
     private void calculateWeton() {
+
+        TextView textName = findViewById(R.id.tv_result);
+        EditText edtName1 = findViewById(R.id.name);
+        EditText edtName2 = findViewById(R.id.pasangan);
+        String resultName1 = edtName1.getText().toString();
+        String resultName2 = edtName2.getText().toString();
+        String mboh = getString(R.string.result_name, resultName1, resultName2);
+        textName.setText(mboh);
+
         int value1 = spinner.getSelectedItemPosition() + 3;
         int value2 = spinner2.getSelectedItemPosition() + 4;
         int value3 = spinner3.getSelectedItemPosition() + 3;
