@@ -1,6 +1,5 @@
 package com.fajar.latihan.calculatorweton;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,15 +9,21 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements AdapterView.OnItemSelectedListener {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.ui.AppBarConfiguration;
+
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private Spinner spinner, spinner2, spinner3, spinner4;
+    private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //start here
         Button button = findViewById(R.id.submit);
 
         //create spinnerday view
@@ -87,8 +92,9 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
         EditText edtName2 = findViewById(R.id.pasangan);
         String resultName1 = edtName1.getText().toString();
         String resultName2 = edtName2.getText().toString();
-        String mboh = getString(R.string.result_name, resultName1, resultName2);
-        textName.setText(mboh);
+        String resultOK = getString(R.string.result_ok, resultName1, resultName2);
+        String resultSemi = getString(R.string.result_semi, resultName1, resultName2);
+        String resultNG = getString(R.string.result_ng, resultName1, resultName2);
 
         int value1 = spinner.getSelectedItemPosition() + 3;
         int value2 = spinner2.getSelectedItemPosition() + 4;
@@ -100,6 +106,24 @@ public class MainActivity extends Activity implements AdapterView.OnItemSelected
 
 
         int resultPatokan = patokan1 + patokan2;
+
+        if (resultPatokan == 2 || resultPatokan == 11 || resultPatokan == 20 || resultPatokan == 29 ||
+                resultPatokan == 3 || resultPatokan == 12 || resultPatokan == 21 || resultPatokan == 30 ||
+                resultPatokan == 4 || resultPatokan == 13 || resultPatokan == 22 || resultPatokan == 31 ||
+                resultPatokan == 5 || resultPatokan == 14 || resultPatokan == 23 || resultPatokan == 32 ||
+                resultPatokan == 8 || resultPatokan == 17 || resultPatokan == 26 || resultPatokan == 35) {
+
+            textName.setText(resultOK);
+
+        } else if (resultPatokan == 6 || resultPatokan == 15 || resultPatokan == 24 || resultPatokan == 33) {
+
+            textName.setText(resultSemi);
+
+        } else {
+
+            textName.setText(resultNG);
+
+        }
 
         TextView resultsPatokan = findViewById(R.id.tv_spinner1_result);
 

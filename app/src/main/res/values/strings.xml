@@ -10,7 +10,9 @@
     <string name="hitung">Hitung</string>
     <string name="copyright">Created By Fajar</string>
     <string name="namapasangan">Masukkan Nama pasangamu</string>
-    <string name="result_name">Hai %1$s! Kamu dan %2$s cocok, karena </string>
+    <string name="result_ok">Hai %1$s! Kamu dan %2$s cocok, karena </string>
+    <string name="result_semi">Hai %1$s! Kamu dan %2$s kurang cocok, karena </string>
+    <string name="result_ng">Hai %1$s! Kamu dan %2$s tidak cocok, karena </string>
 
     <string name="tinari">
         Hasilnya TINARI. Artinya kalian akan gampang menemukan kebahagiaan, gampang dalam mencari rezeki
@@ -79,6 +81,7 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="communicate">Communicate</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 
 </resources>
